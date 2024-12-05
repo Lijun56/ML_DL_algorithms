@@ -1,0 +1,1 @@
+Deeper neural networks could theoretically learn compositional representations of complex functions but were hard to optimize
