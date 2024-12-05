@@ -22,28 +22,28 @@ get y_predict by input x_test, and parameter to trained model
 | Recall   | Reducing false negatives           |
 | F1 Score | Balanced precision & recall        |
 | AUC-ROC  | Discrimination on imbalanced data  |
-### 1. Error and Accuracy
+1. Error and Accuracy
 - **Error Rate**: Proportion of incorrect predictions.
 - **Accuracy**: Proportion of correct predictions.
 - **Use Case**: Good for balanced data but may be misleading for imbalanced datasets.
 
-### 2. Root Mean Squared Error (RMSE) – For Regression
+2. Root Mean Squared Error (RMSE) – For Regression
 - **Formula**: $\text{RMSE} = \sqrt{\frac{1}{N} \sum (y - \hat{y})^2}$
 - **Interpretation**: Measures the average magnitude of prediction errors, penalizing larger errors.
 - **Use Case**: Regression tasks, especially when large errors are particularly impactful.
 
-### 3. [Classification]Precision and Recall – For 
+3. [Classification]Precision and Recall – For 
 - **Precision**: \( \frac{TP}{TP + FP} \) – Focuses on accuracy of positive predictions.
   - *Use Case*: When false positives are costly.
 - **Recall**: \( \frac{TP}{TP + FN} \) – Focuses on capturing all actual positives.
   - *Use Case*: When false negatives are costly.
 
-### 4. F1 Score – Balancing Precision and Recall
+4. F1 Score – Balancing Precision and Recall
 - **Formula**: \( F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision + Recall}} \)
 - **Interpretation**: Harmonic mean of precision and recall.
 - **Use Case**: When a balance of precision and recall is desired.
 
-### 5. [Classification]Area Under the ROC Curve (AUC-ROC) 
+5. [Classification]Area Under the ROC Curve (AUC-ROC) 
 - **ROC Curve**: Plots True Positive Rate (Recall) vs. False Positive Rate.
 - **AUC**: Area under the ROC curve, ranging from 0 to 1 (higher is better).
 - **Use Case**: For assessing model discrimination, especially on imbalanced data.
@@ -72,6 +72,21 @@ supervised training of model means the model requires labeled data during traini
 	•	k-Means is an unsupervised model because it doesn’t need labeled data.
 
 
+## How to think about ML algorithms
+- What is the model?
+  - What kinds of functions can it represent?
+  - What functions does it prefer? (regularization/prior)
+- What is the objective function?
+  - What “values” are implied?
+  - The objective function does not always match the final evaluation metric
+  - Objectives are designed to be optimizable and improve generalization
+- How do I optimize the model?
+  - How long does it take to train, and how does it depend on the amount of training data or number of features?
+  - Can I reach a global optimum?
+- How does the prediction work?
+  - How accurate is the prediction?
+  - How fast can I make a prediction for a new sample?
+  - Does my algorithm provide a confidence on its prediction?
 
 
 

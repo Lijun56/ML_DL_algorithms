@@ -1,0 +1,1 @@
+Pegasos(Primal Estimated sub-GrAdient Solver for SVM) with mini-batch
